@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* class
+        class Employee {
+            constructor(firstname, lastname, salary) {
+                let _salary = salary; // simulate private variable
+
+                this.firstname = firstname; // public property
+                this.lastname = lastname; // public property
+                this.getSalary = function () { // simulate public method
+                    return _salary;
+                };
+            }
+            hello() { // simulate public method
+                console.log("Hello " + this.firstname + "!");
+            }
+        }
+        let dang = new Employee('Dang', 'Red', 10000);
+
+        console.log(dang.firstname); // Dang
+        console.log(dang.lastname); // Red
+        dang.hello(); // Hello Dang!
+        dang.getSalary(); // 10000
+
+        //การสืบทอด class
+        class CEO extends Employee {
+            constructor(firstname, lastname, salary) {
+                super(firstname, lastname, salary);
+            }
+            getSalary() { // simulate public method
+                return super.getSalary() * 2;
+            };
+            hello() { // simulate public method
+                console.log("Hi, nice to meet you. " + this.firstname + "!");
+            }
+        }
+        let ceo = new CEO('Somchai', 'Sudlor', 30000);
+        console.log(ceo.firstname);
+        console.log(ceo.lastname);
+        console.log(ceo.getSalary());
+        */
+
+        //การใช้ bind(this) เพื่อเวลาใช้ callback function ที่ไม่ได้เขียนในรูปแบบ allow จะไม่เห็น this ต้องใช้ bind(this)
+        class Employee {
+            constructor(firstname, lastname, salary) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.salary = salary;
+
+                setTimeout(function () {
+                    console.log(this.firstname); // undefined
+                    console.log(this.lastname); // undefined
+                }.bind(this), 1000);//bind ใช้เพื่อให้ function รู้จัก this    แต่หากใช้functioncแบบ allow function ไม่ต้องใช้ได้
+            }
+        }
+        const Luke = new Employee('Code', 'Camp', 20000);
+
+        class programer extends Employee {
+            constructor(firstname,lastname,salary,position){
+                super(firstname,lastname,salary);
+                this.position = position;
+            }
+            greeting(){
+                console.log(`Hello My name 's ${test.firstname} ${test.lastname} ,I'm ${test.position} have salary ${test.salary}. `);
+            }
+            vat3percent(){
+                return this.salary * 0.03;
+            }
+        }
+        let test = new programer ('Tanyarat','Nattip',35000,'programer');
+        test.greeting();
+        
+    </script>
+</body>
+
+</html>

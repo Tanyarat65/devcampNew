@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="submit" id="btnCount" onclick="counter()" value="count" />
+    <input type="submit" id="btnClear" onclick="clear()" value="clear" />
+    <input type="text" id="text" />
+    <p id="num"></p>
+
+    <script>
+      tempCount = 0;
+      function counter() {
+        tempCount += 1;
+        // let btn = document.getElementById("btnCount");
+        document.getElementById("num").innerText = tempCount;
+      }
+      function clear() {
+        // document.getElementById('btnClear');
+        document.getElementById("num").innerText = 0;
+      }
+    //   function 
+    </script>
+
+
+<!-- Labเสริม
+  <div id="app">
+  <input onkeyup="changeValue(event,5)" type="text" id="input1" value="" />
+  <p id="result"></p>
+</div>
+
+<script>
+  const changeValue = function (event, num) {
+    const val = event.target.value;
+
+    document.getElementById("result").innerHTML =
+      "<strong>" + val + "" + num + "</strong>";
+
+    const sum = +val + 5;
+    event.target.value = sum;
+  };
+  // document.getElementById("input1").addEventListener("keyup", changeValue);
+</script> -->
+
+  </body>
+</html>

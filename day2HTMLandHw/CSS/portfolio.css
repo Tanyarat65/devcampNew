@@ -1,0 +1,37 @@
+.aHeader li {
+    font-size: 24px;
+    color: coral;
+    display: inline;
+    padding: 15px 15px;
+    
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-image: url(../img/istockphoto-1249751042-612x612.jpg);
+}
+
+.aHeader {
+    text-decoration-line: none;
+}
+
+.aHeader:hover {
+    text-shadow: 2px 2px 5px red;
+}
+.product {
+    width: 150px;
+    height: 150px;
+    margin: 56px 15px;
+}
+.dePro {
+    margin: 65px 15px;
+    color: whitesmoke;
+}
+.row {
+    
+}
+div.col {
+    
+}

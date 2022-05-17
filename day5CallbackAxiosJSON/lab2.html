@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greeting(name) {
+            if (name.trim()) {
+                alert(`สวัสดีคุณ ${name}`)
+            } else {
+                alert(`คุณยังไม่ได้กรอกชื่อ`)
+                userInput(greeting)
+            }
+        }
+
+        function userInput(callback) {
+            var name = prompt('กรุณากรอกชื่อเพื่อเข้าเรียน');
+                callback(name);
+            }
+            userInput(greeting);
+    </script>
+</body>
+
+</html>

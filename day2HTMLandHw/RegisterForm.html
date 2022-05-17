@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        tr td {
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <form style="width: 500px; margin: auto;">
+        <fieldset>
+            <legend>Register Form</legend>
+            <table style="margin: auto;">
+                <tbody>
+                    <tr>
+                        <td><label>Firstname:</label></td>
+                        <td><input></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Lastname:</label></td>
+                        <td><input></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Password:</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Confirm Password:</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Email:</label></td>
+                        <td><input type="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Confirm Email:</label></td>
+                        <td><input type="email"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Birthday:</label></td>
+                        <td>
+                            <select id="day"></select>
+                            <select id="month"></select>
+                            <select id="year"></select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Gender:</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="redio" checked>Male
+                            <input type="radio" name="redio">Female
+                        </td>
+                    </tr>
+                </tbody>
+                
+                <tfoot>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </fieldset>
+    </form>
+    <script src="../day2HTMLandHw/Js/Bd.js"></script>
+</body>
+
+</html>

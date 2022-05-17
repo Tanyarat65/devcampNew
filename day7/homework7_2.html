@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        axios.get('https://disease.sh/v3/covid-19/countries/').then(function (respons) {
+            let allCovidData = respons.data;
+            // console.log(allCovidData[0].todayRecovered);
+
+            let r1 = allCovidData.map(x => x.todayRecovered);
+            let r2 = r1.reduce((y, obj) => y + obj);
+            console.log(r2);
+
+            /* Fullsyntax java
+                    function countryFilter(countryFilter){
+                        if (countryFilter.todayDeaths < 10 && countryFilter.population > 100000000) {
+                            return countryFilter.country;
+                            
+                        }
+                    }
+
+                    function countryArr(obj){
+                        return obj.country;
+                    }
+
+
+                    let arr1;
+                    arr1 = allCovidData.filter(countryFilter).map(countryArr);
+                    console.log(arr1);
+              */
+
+            /*  Shothand */
+                const arr1=allCovidData.filter(countryFilter => countryFilter.todayDeaths < 10 && countryFilter.population > 100000000)
+                .map(obj => obj.country);
+                console.log(arr1);
+                
+        });
+
+        axios.get('https://disease.sh/v3/covid-19/all').then(function (respons) {
+            console.log(respons.data.todayRecovered);
+
+        });
+    </script>
+</body>
+
+</html>

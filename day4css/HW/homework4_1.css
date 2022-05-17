@@ -1,0 +1,30 @@
+h1{
+    text-align: center;
+}
+.flex-conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: crimson; */
+    
+}
+
+.inline-block{
+    display: inline-block;
+    align-items: center;
+}
+.row{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imgS{
+    margin: 5px;
+    width: 300px;
+}
+.imgL{
+    margin: 5px;
+    width: 606px;
+}

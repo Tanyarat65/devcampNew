@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button name="add">+ Add</button>
+    <div name="result"></div>
+
+    <script>
+        let add = document.getElementsByName('add');
+        let result = document.getElementsByName('result');
+        //สร้างfunction เพิ่มวันที่ ด้วยการทำ appendChild
+        function addDate(){
+            let createTag = document.createElement('p');//ลำดับรูปแบบ 1 ทำการประกาศก่อนว่าจะสร้างelement p
+                createTag.innerText = "Time : " + new Date();//  สร้าง action ไปที่ element p
+                createTag.style.fontSize = "18px"; //  สร้าง action ไปที่ element p
+
+            result.appendChlid(createTag);//ลำดับรูปแบบ 2 ทำการส่ง element ที่สร้างขึ้นไปที่ html tac div ที่มี name ว่า result
+        }
+
+        function remove(){
+            let arrP = document.querySelectorAll('p');
+            if(arrP[0].leanght == 0){
+                
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(8, 8, 8);
+    color: whitesmoke;
+}
+h1:hover , p:hover {
+    color: chartreuse;
+}
+.borderTest{
+    border-color: tomato;
+    border-style: double;
+    border-radius: 30px 10px;
+    border-width: 1px;
+    background-color: #f5ada0;
+    color: rgb(148, 26, 4);
+    width: 25rem;
+    height: 7rem;
+    padding: 15px 15px;
+    margin: 15px;
+    display: inline-block;
+}
+.flex-container{
+    flex-wrap:wrap; /*จะทำการ responsive ปรับ layer auto*/
+    background: burlywood;
+    display: flex;
+}
+.item{
+    background: grey;
+    padding: 20px;
+    margin: 20px;
+}
+.default {
+    background-color: yellow;
+    height: 100px;
+    }
+    @media (min-width: 576px) {}
+    @media (min-width: 768px) {}
+    @media (min-width: 992px) {
+    .largeScreen {background-color: pink;}
+    .mobileOnly {display: none;}
+    }
+    @media (min-width: 1200px) {}

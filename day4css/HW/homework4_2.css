@@ -1,0 +1,27 @@
+@media (min-width: 500px) {
+    .a {color: red;}
+}
+
+@media (max-width: 700px) {
+    .Bold {
+        font-size: 50px;
+        /* color: tomato; */
+    }
+}
+@media (min-width: 700px) {
+    .Bold {
+        font-size: 35px;
+        /* color: tomato; */
+    }
+}
+.defaul{
+    color: white;
+}
+.img-left{
+    width: 500px;
+    height: 500px;
+}
+.img-right{
+    width:250px;
+    height:250px;
+}

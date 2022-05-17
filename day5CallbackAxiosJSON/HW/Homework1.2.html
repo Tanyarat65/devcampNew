@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Homwork1.2</title> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        td,h1{
+            /* margin: 15px 100px; */
+            border: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+        .container{
+            align-items: center;
+            margin: auto 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- user
+    email
+    photo -->
+    <div class="container">
+        <h1>Hello ReqRes User!</h1>
+        <table>
+            <tr id="row"></tr>
+            <tr id="row2"></tr>
+            <tr id="row3"></tr>
+
+        </table>
+    </div>
+    <!-- <script src="./Homework1.2.js"></script> -->
+    <script>
+        axios.get("https://reqres.in/api/users").then(function (response) {
+            let row = document.getElementById("row");
+            let row2 = document.getElementById("row2");
+            let row3 = document.getElementById("row3");
+            let textHtml1 = "";
+            let textHtml2 = "";
+            let textHtml3 = "";
+
+
+            for (let i = 0; i < response.data.data.length; i++) {
+                textHtml1 += `
+                <td>
+                    <p>${response.data.data[i].first_name}</p>
+                </td>`;
+            }
+            console.log(textHtml1);
+            row.innerHTML = textHtml1;
+
+            for (let i = 0; i < response.data.data.length; i++) {
+                textHtml2 += `
+                <td>
+                    <p>${response.data.data[i].email}</p>
+                </td>`;
+            }
+            row2.innerHTML = textHtml2;
+
+            for (let i = 0; i < response.data.data.length; i++) {
+                textHtml3 += `<td><img src='${response.data.data[i].avatar}'></td>`;
+            }
+            row3.innerHTML = textHtml3
+
+            // for(let i = 0; i < response.data.data.length; i++){
+            //     let img = "<p><img src='" + response.data.data[i].avatar + "'></p>";
+            //     textHtml += "<td>" + response.data.data[i].first_name + response.data.data[i].email + img + "</td>";
+            // }
+            // row.innerHTML = textHtml;
+        })
+    </script>
+</body>
+
+</html>
